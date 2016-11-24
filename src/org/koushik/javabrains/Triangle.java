@@ -1,22 +1,26 @@
 package org.koushik.javabrains;
 
-public class Triangle {
+import java.util.List;
+
+import org.springframework.beans.BeansException;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+
+public class Triangle implements ApplicationContextAware {
     
-	private Point pointA;
-	private Point pointB;
-	private Point pointC;
-	
-	public void setPointA(Point pointA)
-	{
-		this.pointA = pointA;
-	}
-	
-	public Point getPointA()
-	{
+    private Point pointA;
+    private Point pointB;
+    private Point pointC;
+    private ApplicationContext context = null;
+
+	public Point getPointA() {
 		return pointA;
 	}
-	
-	
+
+	public void setPointA(Point pointA) {
+		this.pointA = pointA;
+	}
+
 	public Point getPointB() {
 		return pointB;
 	}
@@ -34,8 +38,14 @@ public class Triangle {
 	}
 
 	public void draw(){
-        System.out.println("Point A = (" + getPointA().getX() + "," + getPointA().getY() + ")");
-        System.out.println("Point B = (" + getPointB().getX() + "," + getPointB().getY() + ")");
-        System.out.println("Point C = (" + getPointC().getX() + "," + getPointC().getY() + ")");
-    }
+		System.out.println("Point A = (" + pointA.getX() + "," + pointA.getY() + ")");
+		System.out.println("Point B = (" + pointB.getX() + "," + pointB.getY() + ")");
+		System.out.println("Point C = (" + pointC.getX() + "," + pointC.getY() + ")");
+     }
+
+	@Override
+	public void setApplicationContext(ApplicationContext context) throws BeansException {
+		this.context = context;
+		
+	}
 }
