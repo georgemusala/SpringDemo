@@ -28,5 +28,6 @@
   </bean>
   
   <bean class="org.koushik.javabrains.DisplayNamePostProcessor" />
+  <bean class="org.koushik.javabrains.MyBeanFactoryPP"/>
   
 </beans>
