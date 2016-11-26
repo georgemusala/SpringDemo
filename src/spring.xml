@@ -25,7 +25,7 @@
   </bean>
   
   <bean id="circle" class="org.koushik.javabrains.Circle">
-  	<property name="center" ref="centerPoint" />
+  
   	 
   </bean>
   
@@ -33,5 +33,7 @@
   	<property name="x" value="0"/>
   	<property name="y" value="0"/>
   </bean>
+  
+  <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />
   
 </beans>
