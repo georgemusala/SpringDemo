@@ -3,13 +3,13 @@
 
 
 <beans>
- <bean id="triangle" class="org.koushik.javabrains.Triangle">
+ <!-- <bean id="triangle" class="org.koushik.javabrains.Triangle">
     <property name="pointA" ref="zeroPoint" />
     <property name="pointB" ref="point2" />
     <property name="pointC" ref="point3" />
- </bean>
+ </bean> -->
  
- <bean id="zeroPoint" class="org.koushik.javabrains.Point">
+ <!-- <bean id="zeroPoint" class="org.koushik.javabrains.Point">
     <property name="x" value="0" />
     <property name="y" value="0" />
  </bean>
@@ -22,7 +22,7 @@
   <bean id="point3" class="org.koushik.javabrains.Point">
     <property name="x" value="0" />
     <property name="y" value="20" />
-  </bean>
+  </bean> -->
   
   <bean id="circle" class="org.koushik.javabrains.Circle">
   
@@ -34,6 +34,8 @@
   	<property name="y" value="0"/>
   </bean>
   
-  <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />
+  <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
+  
+
   
 </beans>

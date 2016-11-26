@@ -17,7 +17,7 @@ public class Triangle implements Shape{
 	}
 	
 	
-	public Point getPointB() {
+	public Point getPointB()
 		return pointB;
 	}
 
